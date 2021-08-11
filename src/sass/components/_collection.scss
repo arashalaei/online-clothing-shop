@@ -1,0 +1,41 @@
+.collection{
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+        grid-gap: 3rem;
+    }
+
+    &__item{
+        height: 38rem;
+        border: 1px solid $color-grey-light-2;
+        cursor: pointer;
+    }
+
+    &__item-image{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 4px;
+        &:hover{
+            opacity: 0.75;
+        }
+    }
+
+    &__item-text-box{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-name{
+        font-size: 1.5rem;
+    }
+
+    &__item-price{
+        font-size: 1.2rem;
+    }
+
+}
