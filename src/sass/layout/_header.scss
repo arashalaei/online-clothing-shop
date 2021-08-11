@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-grey-dark-2; 
+    margin: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    &__logo-box{
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__logo{
+        &:focus{
+            outline: none;
+        }
+    }
+
+    ul{
+        list-style: none;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: flex-end;
+       & > li{
+           padding: 1rem;
+           
+           & > a {
+               text-decoration: none;
+               color: $color-grey-dark-3;
+               &:focus{
+                   outline: none;
+               }
+           }
+       }
+    }
+}
