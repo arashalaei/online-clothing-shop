@@ -11,8 +11,12 @@
 @import"./components/menu";
 @import"./components/collections";
 @import"./components/collection";
+@import"./components//form";
+@import"./components/btn";
 // layouts
 @import"./layout/header";
+@import"./layout/signin";
 // pages
 @import"./pages/homepage";
 @import"./pages/shoppage";
+@import"./pages/registrationandAuthenticationpage";

@@ -1,0 +1,32 @@
+.btn{
+    text-transform: uppercase;
+    padding: 1.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid $color-grey-light-2;
+
+    &:hover{
+        background-color: $color-white;
+    }
+
+    &--blue,
+    &--black{
+        color:$color-white;
+    }
+    &--blue{
+        background-color: $color-tertiary-light;
+        &:hover{
+            color: $color-tertiary-light;
+            border: 1px solid $color-tertiary-light;
+        }
+    }
+
+    &--black{
+        background-color: $color-grey-dark-3;
+        &:hover{
+            color: $color-grey-dark-3;
+            border: 1px solid $color-grey-dark-3;
+        }
+    }
+}

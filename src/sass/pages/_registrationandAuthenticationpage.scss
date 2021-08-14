@@ -1,0 +1,6 @@
+.registrationandAuthenticationpage{
+    display: grid;
+    grid-template-rows: 80vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+}
