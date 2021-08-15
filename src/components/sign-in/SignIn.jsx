@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FormInput from './../form-input/FormInput'
 import Button from './../button/Button';
+import {signInWithGoogle} from './../../utils/firebase';
 
 class SignIn extends Component{
     constructor(){
@@ -33,7 +34,7 @@ class SignIn extends Component{
                     <FormInput type="password" label="Password" handleChange={this.handleChange}/>
                     <div className="form__group form__group-submit">
                         <Button color="blue">Sign in</Button>
-                        <Button color="black">Sign in with Google</Button>
+                        <Button color="black" onClick={signInWithGoogle}>Sign in with Google</Button>
                     </div>
                 </form>
             </section>
