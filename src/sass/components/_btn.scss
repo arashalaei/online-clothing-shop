@@ -1,11 +1,11 @@
 .btn{
     text-transform: uppercase;
-    padding: 1.5rem;
+    padding: 2rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
     border: 1px solid $color-grey-light-2;
-
+    width: 80%;
     &:hover{
         background-color: $color-white;
     }

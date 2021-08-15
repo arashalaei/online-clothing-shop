@@ -10,7 +10,7 @@
     &__input{
             border: none;
             padding: 1.5rem 2rem;
-            width: 30rem;
+            width: 40rem;
             display: block;
             border: 1px solid $color-grey-light-2;
             border-bottom: 3px solid $color-grey-light-2;
@@ -54,6 +54,6 @@
 
     &__group-submit{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 }
