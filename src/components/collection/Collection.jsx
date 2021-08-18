@@ -1,6 +1,9 @@
 import React from 'react';
+import Button from './../button/Button';
+import {connect} from 'react-redux';
+import {addItem} from './../../redux/cart-dropdown/cartDropDown.action.js';
 
-const Collection = ({title, items}) => (
+const Collection = ({title, items, addItem}) => (
     <div className="collection">
         <h2 className="heading-secondary u-margin-bottom-small">{title}</h2>
         <div className="collection__items">   
@@ -19,6 +22,7 @@ const Collection = ({title, items}) => (
                                         {price}$
                                     </span>
                                 </div> 
+                                <Button color="black" onClick={() => addItem({id, name, imageUrl, price})}>Add to cart</Button>
                             </div>
                     )
             }
@@ -26,4 +30,8 @@ const Collection = ({title, items}) => (
     </div>
 );
 
-export default Collection;
+const mapDispatchToProps = (dispatch) => ({
+    addItem: item => dispatch(addItem(item))
+});
+
+export default connect(null, mapDispatchToProps)(Collection);

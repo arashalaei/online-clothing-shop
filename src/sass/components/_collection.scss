@@ -3,15 +3,28 @@
         margin-bottom: 3rem;
     }
     &__items{
+        
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
         grid-gap: 3rem;
     }
 
     &__item{
+        position: relative;
         height: 38rem;
         border: 1px solid $color-grey-light-2;
-        cursor: pointer;
+        .btn{
+            position: absolute;
+            bottom: 2rem;
+            width: 80%;
+            left: 10%;
+            opacity: 0;
+        }
+
+
+        &:hover .btn {
+            opacity: 1;
+        }
     }
 
     &__item-image{
@@ -20,9 +33,10 @@
         background-size: cover;
         background-position: center;
         margin-bottom: 4px;
-        &:hover{
-            opacity: 0.75;
-        }
+    }
+
+    &__item:hover &__item-image{
+        opacity: 0.75;
     }
 
     &__item-text-box{
@@ -35,7 +49,8 @@
     }
 
     &__item-price{
-        font-size: 1.2rem;
+        font-size: 1.35rem;
     }
+
 
 }
