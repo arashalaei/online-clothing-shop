@@ -1,0 +1,26 @@
+.checkoutpage{
+    font-size: 1.6rem;
+    width: 60%;
+    margin: 0 auto;
+    &__header{
+        display: flex;
+        padding: 3rem;
+        border-bottom: 1px solid $color-grey-light-2;
+    }
+
+    &__header-item{
+        display: inline-block;
+        &:not(:last-child){
+            width: 23%;
+        }
+    }
+
+    &__total{
+        position: absolute;
+        // bottom: 0;
+        margin-top: 2rem;
+        right: 20%;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+    }
+}

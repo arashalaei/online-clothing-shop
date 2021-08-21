@@ -1,0 +1,23 @@
+.checkout-item{
+    display: flex;
+    align-items: center;
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    border-bottom: 1px solid $color-grey-light-2;
+    padding: 2rem 0;
+    *:not(:last-child){
+        width: 23%;
+    }
+
+    &__description{
+        margin-left: 2rem;
+    }
+
+    &__image{
+        padding: 0;
+        & > img{
+            display: block;
+            width: 100%;
+        }
+    }
+}
