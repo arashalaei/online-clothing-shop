@@ -1,5 +1,5 @@
 import cartDropDownActionTypes from './cartDropDownActionTypes';
-import {addItemToCart} from './cartDropDown.utils';
+import {addItemToCart, removeItemFromCart, decreaseQuantity} from './cartDropDown.utils';
 
 const INITIAL_STATE = {
     hidden: false, 
@@ -17,6 +17,17 @@ const cartDropDownReducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state, 
                 cartItems: addItemToCart(state.cartItems, action.payload)
+            }
+        case cartDropDownActionTypes.REMOVE_ITEM:
+            return {
+                ...state,
+                cartItems: removeItemFromCart(state.cartItems, action.payload)
+            }
+        
+        case cartDropDownActionTypes.DECREASE_QUANTITY:
+            return{
+                ...state, 
+                cartItems: decreaseQuantity(state.cartItems, action.payload)
             }
         default:
             return state;

@@ -8,3 +8,19 @@ export const addItemToCart = (cartItems, catrtItemToAdd) =>{
 
     return [...cartItems, {...catrtItemToAdd, quantity: 1}]
 }
+
+export const removeItemFromCart = (cartItems, cartToRemove) => {
+    return cartItems.filter(cartItem => cartItem.id !== cartToRemove.id)
+}
+
+export const decreaseQuantity = (cartItems, cartToDecrease) => {
+    if(+cartToDecrease.quantity === 1){
+        return removeItemFromCart(cartItems, cartToDecrease)
+    }
+        return cartItems.map(cartItem => 
+            cartItem.id === cartToDecrease.id?
+                {...cartItem, quantity: cartItem.quantity - 1}
+            : cartItem
+            )
+    
+}
