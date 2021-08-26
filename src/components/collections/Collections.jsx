@@ -1,27 +1,21 @@
-import React, {Component} from 'react';
-import COLLECTIONS_DATA from './COLLECTIONS_DATA';
+import React from 'react';
 import Collection from '../collection/Collection';
+import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+import {selectCollectionsData} from './../../redux/collections/collections.selector';
 
-class Collections extends Component {
-    constructor(){
-        super();
-
-        this.state = {
-            collections: COLLECTIONS_DATA
+const Collections = ({collections}) =>  (
+    <div className="collections">
+        {
+            collections
+                .map(({id, ...otherCollectionProps}) => <Collection key={id} {...otherCollectionProps}/>)
         }
-    }
+    </div>
+);
 
-    render(){
-        return(
-            <div className="collections">
-                {
-                    this.state
-                        .collections
-                        .map(({id, ...otherCollectionProps}) => <Collection key={id} {...otherCollectionProps}/>)
-                }
-            </div>
-        );
-    }
-}
 
-export default Collections
+const mapStateToProps = createStructuredSelector({
+    collections: selectCollectionsData
+})
+
+export default connect(mapStateToProps)(Collections);
