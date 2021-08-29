@@ -22,7 +22,7 @@ const Collection = ({title, items, addItem}) => (
                                         {price}$
                                     </span>
                                 </div> 
-                                <Button color="black" onClick={() => addItem({id, name, imageUrl, price})}>Add to cart</Button>
+                                <Button black onClick={() => addItem({id, name, imageUrl, price})}>Add to cart</Button>
                             </div>
                     )
             }

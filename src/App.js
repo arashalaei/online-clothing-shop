@@ -1,7 +1,7 @@
 import './sass/main.scss';
 import {Component} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
-import HomePage from './components/pages/home/HomePage';
+import HomePage from './components/pages/home-page/HomePage';
 import ShopPage from './components/pages/shop/ShopPage';
 import Header from './components/header/Header';
 import RegistrationAndAuthenticationPage from './components/pages/Registration-And-authentication-page/RegistrationAndAuthenticationPage.jsx';

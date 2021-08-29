@@ -1,8 +1,8 @@
 import React from 'react';
+import {ButtonContainer} from './button.styles';
 
-
-const Button = ({children, color, ...otherProps}) => (
-    <button className={`btn btn--${color}`} {...otherProps}>{children}</button>
+const Button = ({children, ...otherProps}) => (
+    <ButtonContainer {...otherProps}>{children}</ButtonContainer>
 );
 
 export default Button;

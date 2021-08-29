@@ -64,7 +64,7 @@ class SignIn extends Component{
                     <FormInput type="password" label="Password" name="password" handleChange={this.handleChange} value={password}/>
                     <FormInput type="password" label="Confirm password" name="confirmPassword" handleChange={this.handleChange} value={confirmPassword}/>
                     <div className="form__group form__group-submit">
-                        <Button color="black">Sign up</Button>
+                        <Button black>Sign up</Button>
                     </div>
                 </form>
             </section>

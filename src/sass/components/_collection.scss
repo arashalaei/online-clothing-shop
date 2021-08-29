@@ -13,7 +13,7 @@
         position: relative;
         height: 38rem;
         border: 1px solid $color-grey-light-2;
-        .btn{
+        button{
             position: absolute;
             bottom: 2rem;
             width: 80%;
@@ -22,7 +22,7 @@
         }
 
 
-        &:hover .btn {
+        &:hover button {
             opacity: 1;
         }
     }

@@ -49,8 +49,8 @@ class SignIn extends Component{
                     <FormInput type="email" label="Email" handleChange={this.handleChange} value={this.state.email}/>
                     <FormInput type="password" label="Password" handleChange={this.handleChange} value={this.state.password}/>
                     <div className="form__group form__group-submit">
-                        <Button color="blue">Sign in</Button>
-                        <Button color="black" onClick={signInWithGoogle}>Sign in with Google</Button>
+                        <Button blue>Sign in</Button>
+                        <Button black onClick={signInWithGoogle}>Sign in with Google</Button>
                     </div>
                 </form>
             </section>

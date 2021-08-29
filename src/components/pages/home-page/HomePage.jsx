@@ -1,10 +1,11 @@
 import React from 'react';
 import Menu from '../../menu/Menu';
+import {HomePageContainer} from './homepage.styles';
 
 const HomePage = (props) => (
-    <main className="homepage">
+    <HomePageContainer>
         <Menu />
-    </main>
+    </HomePageContainer>
 )
 
 export default HomePage;

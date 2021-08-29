@@ -17,7 +17,7 @@ const CartDropDown = ({cartItems, history, dispatch}) => (
                 
             }
         </div>
-        <Button color="black" onClick ={() => {
+        <Button black onClick ={() => {
             history.push('/checkout')
             dispatch(toggleCartHidden())
             }}>Check out</Button>
